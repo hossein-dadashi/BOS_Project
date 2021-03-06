@@ -1,0 +1,47 @@
+
+<div class="pricing-main-cont main-screen-frame col">
+    <div class="description-cont col">
+        <h1>Pricing</h1>
+        <p>Select desired services and features from the right panel and we calculate the price on the left. The you can continue to the steps.</p>
+    </div>
+    <div class="panel-cont row">
+        <div class="price-cont col">
+            <h1>Final Price</h1>
+            <span class="final-price col">
+
+                <!--
+                    price : Price pipe make thousand seprator and adding currency symbol at the beginig of price number .
+                -->
+
+                <p class="per-year">{{perYearPrice | price}}<span>/year</span></p> 
+                <p class="per-month">{{perMonthPrice | price}}<span>/year</span></p>
+            </span>
+            <button>Proceed to next step</button>
+        </div>
+        <div class="tab-cont col">
+            <div class="tab-header row">
+                <span [ngClass]="(activeTab === 'services') ? 'active-tab': 'inactive-tab'" (click)="changeTab('services')">
+                    <h5 >Services</h5>
+                </span>
+                <span [ngClass]="(activeTab === 'additionals') ? 'active-tab': 'inactive-tab'" (click)="changeTab('additionals')">
+                    <h5 >Additionals</h5>
+                </span>
+            </div>
+
+            <!-- 
+                bos-check-box : this component can give dynamic list of services and create nested checkbox list,
+                                It has one event emitter called checkedArrayList wich can return selected services and
+                                features by user at any time. 
+            -->
+
+            <div class="tab-body-cont">
+                <span class="service-body" *ngIf="activeTab === 'services'">
+                    <bos-check-box [checkboxList]="services" (checkedArrayList)="onChangeServices($event)"></bos-check-box>
+                </span>
+                <span class="additional-body" *ngIf="activeTab === 'additionals'">
+                    <bos-check-box [checkboxList]="additionals" (checkedArrayList)="onChangeAdditionals($event)"></bos-check-box>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

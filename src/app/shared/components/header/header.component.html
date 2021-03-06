@@ -1,0 +1,16 @@
+<div class="main-header-cont main-screen-frame row">
+    <div class="logo">
+        <p>Logo</p>
+    </div>
+    <div class="menu-cont row">
+        <div  (click)="goToTab('home')" [ngClass]="{'active-item': activeMenuTab === 'home'}" class="menu-item">
+            Home
+        </div>
+        <div  [routerLink]="'/pricing'" (click)="goToTab('services')" [ngClass]="{'active-item': activeMenuTab === 'services'}" class="menu-item">
+            Services
+        </div>
+        <div  [routerLink]="'/contact-us'" (click)="goToTab('contactUs')" [ngClass]="{'active-item': activeMenuTab === 'contactUs'}" class="menu-item">
+            Contact us
+        </div>
+    </div>
+</div>

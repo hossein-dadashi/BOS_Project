@@ -1,0 +1,20 @@
+<div class="main-checkbox-list-cont">
+    <ul>
+        <li *ngFor="let checkboxItem of checkboxList; let i = index">
+            <div>
+                <label>
+                    <input [checked]="checkboxItem.isRequested" (change)="parentChange($event.target.checked, i)" #mainCheckbox type="checkbox">
+                    {{checkboxItem.serviceName}}
+                </label>
+                <ul>
+                    <li *ngFor="let subItem of checkboxItem.features; let j = index">
+                        <label>
+                            <input #subCheckbox [checked]="subItem.isRequested" (change)='featureListChange($event.target.checked, checkboxItem.features, i, j)' type="checkbox" class="expandable-checkbox-sub-option">
+                            {{subItem.serviceName}}
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: system-ui;
+    height: 100vh;
+    margin: 0!important;
+    width: 100vw;
+    background: #f7f7f7;
+}
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.col {
+    display: flex;
+    flex-flow: column;
+}
+
+.main-screen-frame {
+    padding: 0vw 8vw;
+}

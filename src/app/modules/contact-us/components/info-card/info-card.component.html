@@ -1,0 +1,12 @@
+<div class="main-contact-card col">
+    <h3>{{information.title}}</h3>
+    <div *ngIf="information.icon !== '';then icon_img else skeleton"></div>  
+    <ng-template #icon_img>
+        <img [src]="information.icon">
+    </ng-template>  
+    <ng-template #skeleton>
+        <span class="img-skeleton"></span>
+    </ng-template>  
+    <!-- If our contact has any link so it should be clickable -->
+    <p [ngClass]="{'link-pionter': information.link}" (click)="information.link && showLink(information.link)">{{information.address}}</p>
+</div>

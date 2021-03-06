@@ -1,0 +1,24 @@
+
+.main-header-cont {  
+    align-items: center;
+    justify-content: space-between;
+    background: #cacaca;
+    color: white;
+    height: 55px;
+    .menu-cont{
+        height: 100%;
+        align-items: center;
+        .menu-item {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            width: 100px;
+            justify-content: center;
+            cursor: pointer;
+            outline: none;
+        }
+        .active-item {
+            font-weight: 700;
+        }
+    }
+}

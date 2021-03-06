@@ -1,0 +1,81 @@
+.pricing-main-cont {
+    margin-top: 50px;
+    .description-cont{
+        text-align: center;
+        align-items: center;
+        p {
+            width: 440px;
+        }
+    }
+    .panel-cont {
+        margin-top: 50px;
+        .price-cont {
+            background: white;
+            min-width: 250px;
+            height: 270px;
+            box-shadow: 0px 2px 8px -4px;
+            border-radius: 3px;
+            align-items: center;
+            justify-content: space-between;
+            h1 {
+                margin-bottom: 0;
+            }
+            .final-price {
+                text-align: center;
+                align-items: center;
+                p{
+                    margin: 0;
+                }
+                .per-year {
+                    margin-bottom: 10px;
+                    font-size: 40px;
+                    font-weight: 700;
+                    span {
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                } 
+                .per-month {
+                    font-size: 12px;
+                    font-weight: 700;
+                    color: #949494;
+                    span{
+                        font-weight: 400;
+                    }
+                }
+            }
+            button {
+                width: 220px;
+                background: #cacaca;
+                border: 0;
+                margin-bottom: 20px;
+                color: white;
+                height: 36px;
+                border-radius: 10px;
+                outline: 0;
+                font-weight: 600;
+            }
+        }
+        .tab-cont {
+            background: white;
+            margin-left: 20px;
+            box-shadow: 0px 2px 8px -4px;
+            width: 100%;
+            .tab-header {
+                padding: 0px 30px;
+                border-bottom: 1.2px solid #cacaca;
+                span {
+                    width: 90px;
+                    text-align: center;
+                    cursor: pointer;
+                }
+                .active-tab{
+                    border-bottom: solid #cacaca;
+                }
+                .inactive-tab{
+                    color: #a7a7a7;
+                }
+            }
+        }
+    }
+}

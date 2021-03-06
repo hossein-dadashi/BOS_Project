@@ -1,0 +1,21 @@
+.main-contact-card {
+    background: white;
+    width: 250px;
+    height: 270px;
+    box-shadow: 0px 2px 8px -4px;
+    border-radius: 3px;
+    align-items: center;
+    justify-content: space-between;
+    p{
+        font-weight: 500;
+    }
+    .img-skeleton {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: #cacaca;
+    }
+    .link-pionter{
+        cursor: pointer;
+    }
+}
